@@ -1,11 +1,13 @@
 import {KUTYALISTA} from "./adat.js";
 import {osszeallit, osszeallit2} from "./adatkezeles.js";
+import { rendezBarmiSzerint } from "./rendezesSzures.js";
 window.addEventListener("load", init);
 
 let ARTICLE;
 let kartyak;
 let tablazat;
 function init() {
+  rendezBarmiSzerint(KUTYALISTA,KUTYALISTA.kor, -1);
   ARTICLE = document.querySelector("article");
   kartyak = document.querySelector("section.kartyak");
   tablazat = document.querySelector("section.tablazat");
